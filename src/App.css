@@ -9,7 +9,13 @@ header h1 {
 color: white;
 font-weight: 700;
 }
-
 body {
-  font-family: 'Roboto', sans-serif;
+  height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
+.container {
+  background-color: black;
 }
