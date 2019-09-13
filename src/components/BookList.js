@@ -13,7 +13,8 @@ const BookList = ({books}) => {
     const showModal = (bookData) => {
         setVisible(true)
         setPopupData({
-            image: bookData.volumeInfo.imageLinks.smallThumbnail
+            image: bookData.volumeInfo.imageLinks.smallThumbnail,
+            title: bookData.volumeInfo.title
         })
       };
     
@@ -22,7 +23,6 @@ const BookList = ({books}) => {
       };
     
       const handleCancel = e => {
-        console.log(e);
         setVisible(false)
       };
 
@@ -39,7 +39,7 @@ const BookList = ({books}) => {
             {book}
             </div>
             <Modal
-              title="Basic Modal"
+              title={popupData.title}
               visible={visible}
               onOk={handleOk}
               onCancel={handleCancel}

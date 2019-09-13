@@ -3,7 +3,7 @@ import BookList from './BookList';
 import SearchBar from './SearchBar';
 import axios from 'axios';
 
-export default function Books() {
+const Books = () => {
     const [searchField , setSearchField] = useState('');
     const [books, setBooks] = useState ([]);
     const [loading, setLoading] = useState (false);
@@ -31,3 +31,5 @@ export default function Books() {
         </div>
     )
 }
+
+export default Books;

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import Books from './components/Books'
 
-function App() {
+const App = () => {
   return (
     <div className='container'>
       <Header/>

@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Header() {
+const Header = () => {
     return (
         <header className='header'>
             <h1>BOOK FINDER </h1>
         </header>
     )
 }
+
+export default Header;
