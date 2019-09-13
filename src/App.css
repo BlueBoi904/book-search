@@ -1,16 +1,18 @@
 @import '~antd/dist/antd.css';
 
 header {
-  padding: 20px 0px;
+  padding: 30px 0px;
   background: #405b77;
   color:white;
   text-align: center;
   width: 100vw;
+  margin-bottom: 80px;
 }
 
 header h1 {
 color: white;
 font-weight: 600;
+margin: 0;
 }
 /* body {
   height: 100%;
@@ -23,9 +25,13 @@ font-weight: 600;
   justify-items: center;
 }
 
+.book-list {
+  display: grid
+}
 
-.searchbar {
-   justify-content: center;
+
+.searchbar-div {
+   margin-bottom: 80px;
 }
 
 .container {

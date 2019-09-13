@@ -1,23 +1,24 @@
-import React from 'react'
-import "antd/dist/antd.css";
-import { Input } from "antd";
+import React from 'react';
+import { Input } from 'antd';
 
-const { Search } = Input;
 
-export default function SearchBar() {
+const Search = Input.Search
 
-    return (
-        <div>
-    <Search
-      placeholder="Search for books"
-      enterButton="Search"
-      size="default"
-      style={{ width: 250,
-            justifyContent: 'center'
-    }}
-    //   onSearch={handleSearch}
-    />
-  </div>
-    );
+const SearchBar = (props) =>  {
+    const {handleChange, handleSearch} = props;
 
+        return (
+            <div className='searchbar-div'>
+                <Search
+                    placeholder="Find a book"
+                    enterButton="Search"
+                    size="default"
+                    onChange={handleChange}
+                    allowClear
+                    onSearch={handleSearch}
+                />
+            </div>
+        );
 }
+
+export default SearchBar;
