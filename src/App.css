@@ -7,15 +7,16 @@ header {
 
 header h1 {
 color: white;
-font-weight: 700;
+font-weight: 600;
 }
-body {
+/* body {
   height: 100%;
     margin: 0;
     padding: 0;
     background-color: #ccc;
-}
+} */
 
 .container {
-  background-color: black;
+  background-color: rgb(245, 231, 231);
+  height: 100vh;
 }
