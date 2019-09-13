@@ -1,9 +1,12 @@
 import React from 'react'
 
-export default function BookCard() {
+const BookCard = ({book}) => {
+    console.log(book)
     return (
         <div className='book-card'>
-            
+            <p>book</p>
         </div>
     )
 }
+
+export default BookCard

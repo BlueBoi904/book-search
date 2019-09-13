@@ -2,11 +2,17 @@ import React from 'react';
 import BookCard from './BookCard';
 
 
-export default function BookList() {
+
+const BookList = ({books}) => {
+    const book = books.map(book => {
+
+         return <a key={book.id} href={book.volumeInfo.canonicalVolumeLink}> <BookCard book={book}/></a>
+        })
     return (
         <div className='book-list'>
-            <a href='https://www.w3schools.com'><BookCard /></a>
-            
+            {book}
         </div>
     )
 }
+
+export default BookList;

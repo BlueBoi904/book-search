@@ -14,8 +14,8 @@ export default function Books() {
     const handleSearch = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`${URL}${searchField}&key=${KEY}`)
-            console.log(response);
+            const response = await axios.get(`${URL}${searchField}&maxResults=20&key=${KEY}`);
+            setBooks(response.data.items)
         } catch(err) {
             console.log(err);
         }
@@ -27,7 +27,7 @@ export default function Books() {
     return (
         <div className='books'>
             <SearchBar handleChange={handleChange} handleSearch={handleSearch}/>
-            <BookList />
+            <BookList books={books} />
         </div>
     )
 }
