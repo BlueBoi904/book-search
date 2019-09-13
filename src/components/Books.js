@@ -11,8 +11,14 @@ export default function Books() {
     const URL = 'https://www.googleapis.com/books/v1/volumes?q='
     const KEY = process.env.REACT_APP_API_KEY;
 
-    const handleSearch = () => {
+    const handleSearch = async () => {
         setLoading(true);
+        try {
+            const response = await axios.get(`${URL}${searchField}&key=${KEY}`)
+            console.log(response);
+        } catch(err) {
+            console.log(err);
+        }
     }
 
     const handleChange = e => {

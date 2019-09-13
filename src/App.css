@@ -41,3 +41,7 @@ margin: 0;
   flex-direction: column;
   align-items: center;
 }
+
+.book-card {
+  background-color: #ffffff;
+}
