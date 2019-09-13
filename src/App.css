@@ -1,8 +1,11 @@
+@import '~antd/dist/antd.css';
+
 header {
   padding: 20px 0px;
   background: #405b77;
   color:white;
   text-align: center;
+  width: 100vw;
 }
 
 header h1 {
@@ -16,7 +19,19 @@ font-weight: 600;
     background-color: #ccc;
 } */
 
+.books {
+  justify-items: center;
+}
+
+
+.searchbar {
+   justify-content: center;
+}
+
 .container {
   background-color: rgb(245, 231, 231);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
