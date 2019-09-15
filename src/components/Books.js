@@ -33,7 +33,13 @@ const Books = () => {
   return (
     <div className="books">
       <SearchBar handleChange={handleChange} handleSearch={handleSearch} />
-      {loading ? <Spin /> : <BookList books={books} />}
+      {loading ? (
+        <div className="spinner">
+          <Spin />
+        </div>
+      ) : (
+        <BookList books={books} />
+      )}
     </div>
   );
 };

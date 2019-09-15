@@ -3,17 +3,20 @@
 header {
   padding: 30px 0px;
   background: #405b77;
-  color:white;
+  color: white;
   text-align: center;
   width: 100vw;
   margin-bottom: 80px;
 }
 
+
+
 header h1 {
-color: white;
-font-weight: 600;
-margin: 0;
+  color: white;
+  font-weight: 600;
+  margin: 0;
 }
+
 /* body {
   height: 100%;
     margin: 0;
@@ -29,9 +32,14 @@ margin: 0;
   display: grid
 }
 
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .searchbar-div {
-   margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .container {
@@ -48,5 +56,5 @@ margin: 0;
   width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
