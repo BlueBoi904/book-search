@@ -21,14 +21,16 @@ const Books = () => {
   };
 
   const handleSearch = async () => {
-
+     setBooks([]);
+     setLoading(true);
     try {
+      
       setError(false);
       if (searchField === '') {
         let errorMessage =  { message : 'You must enter a search value' };
         throw errorMessage;
       }
-      setLoading(true);
+      
       const response = await axios.get(
         `${URL}${searchField}&maxResults=20&key=${KEY}`,
       );
@@ -49,38 +51,27 @@ const Books = () => {
     setSearchField(e.target.value);
   };
 
-  const handleRender = () => {
-      if (loading){
-      return <div className="spinner">
-       <Spin />
-      </div>
-    } else if (error) {
-      return <div>
-        <Alert 
-      message='An error has occured'
-      description={errorMessage}
-      type="error"
-      closable
-      onClose={onClose}/>
-      </div>
-    } else {
-      return <BookList books={books} />
-    }
-  }
   return (
     <div className="books">
       <SearchBar handleChange={handleChange} handleSearch={handleSearch} />
-        {handleRender()}
+      {loading && <div className="spinner">
+       <Spin />
+      </div>}
+      {error ? (
+      <div>
+      <Alert 
+        message='An error has occured'
+        description={errorMessage}
+        type="error"
+        closable
+        onClose={onClose}/>
+        </div>
+      ) : (
+      <BookList books={books} />
+      )}
     </div>
   );
 };
 
 export default Books;
 
-// {loading ? (
-//   <div className="spinner">
-//     <Spin />
-//   </div>
-// ) : (
-//   <BookList books={books} />
-// )}
