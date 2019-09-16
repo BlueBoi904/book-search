@@ -27,6 +27,7 @@ const Books = () => {
       
       setError(false);
       if (searchField === '') {
+        setLoading(false);
         let errorMessage =  { message : 'You must enter a search value' };
         throw errorMessage;
       }
@@ -35,13 +36,14 @@ const Books = () => {
         `${URL}${searchField}&maxResults=20&key=${KEY}`,
       );
       if (!response.data.items){
-        setLoading(false)
+        setLoading(false);
         let errorMessage =  { message : 'There are no results for your search' };
         throw errorMessage;
       }
       setLoading(false);
       setBooks(response.data.items);
     } catch (err) {
+      setLoading(false);
       setError(true);
       setErrorMessage(err.message);
     }
