@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: "Roboto", -apple-system, "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Roboto",
+    sans-serif, -apple-system;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
