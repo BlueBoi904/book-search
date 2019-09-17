@@ -23,8 +23,7 @@ const Books = () => {
   const handleSearch = async () => {
      setBooks([]);
      setLoading(true);
-    try {
-      
+    try {  
       setError(false);
       if (searchField === '') {
         setLoading(false);

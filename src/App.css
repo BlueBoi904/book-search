@@ -44,7 +44,7 @@ header h1 {
 
 .container {
   background-color: rgb(245, 231, 231);
-  height: 100vh;
+  height: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
