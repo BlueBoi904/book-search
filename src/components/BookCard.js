@@ -4,6 +4,7 @@ import { Button } from 'antd';
 // import { Card, Button } from 'antd';
 
 const BookCard = ({ book, showModal }) => (
+
   <div
     tabIndex={0}
     role="button"
@@ -12,22 +13,32 @@ const BookCard = ({ book, showModal }) => (
     onKeyDown={() => showModal(book)}
   >
 
-    <h5>{book.volumeInfo.title ? <p>{book.volumeInfo.title}</p> : null}</h5>
-    <p>
-    By:
-      {' '}
-      {book.volumeInfo.authors[0] ? <p>{book.volumeInfo.authors[0]}</p> : null}
-    </p>
+    <div className="book-card-content">
+      {book.volumeInfo.imageLinks ? (
+        <img
+          className="card-img"
+          alt={book.volumeInfo.title}
+          src={book.volumeInfo.imageLinks.smallThumbnail}
+        />
+      ) : null}
+      {book.volumeInfo.title ? <h5>{book.volumeInfo.title}</h5> : null}
+      {book.volumeInfo.authors[0] ? (
+        <p>
+By:
+          {' '}
+          {book.volumeInfo.authors[0]}
+        </p>
+      ) : null}
 
-    {book.volumeInfo.imageLinks ? (
-      <img
-        className="card-img"
-        alt={book.volumeInfo.title}
-        src={book.volumeInfo.imageLinks.smallThumbnail}
-      />
-    ) : null}
-    {/* <Button size="small" type="primary">Primary</Button> */}
+
+    </div>
+    <div className="button-div">
+      <Button className="card-button" size="small" type="primary">More Info</Button>
+    </div>
+
   </div>
+
+
   // <div>
   //   <Card
   //     title={book.volumeInfo.title ? <p>{book.volumeInfo.title}</p> : null}

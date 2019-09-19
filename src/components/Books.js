@@ -32,7 +32,7 @@ const Books = () => {
       }
 
       const response = await axios.get(
-        `${URL}${searchField}&key=${KEY}`,
+        `${URL}${searchField}&maxResults=16&key=${KEY}`,
       );
       if (!response.data.items) {
         setLoading(false);
@@ -61,7 +61,7 @@ const Books = () => {
       </div>
       )}
       {error ? (
-        <div>
+        <div className="error">
           <Alert
             message="An error has occured"
             description={errorMessage}
