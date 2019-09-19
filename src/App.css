@@ -6,7 +6,6 @@ header {
   color: white;
   text-align: center;
   width: 100vw;
-  margin-bottom: 80px;
 }
 
 
@@ -18,15 +17,20 @@ header h1 {
 }
 
 body {
-  background: rgb(245, 231, 231);
+  background: #ffffff;
 }
 
 .books {
-  justify-items: center;
+  margin: 0 auto;
 }
 
 .book-list {
-  display: grid
+  display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1080px;
+    justify-content: center;
 }
 
 .spinner {
@@ -36,20 +40,29 @@ body {
 }
 
 .searchbar-div {
-  margin-bottom: 80px;
+  margin: 80px auto;
+  width: 250px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+}
+
+.card-img {
+  width: 100px;
+  border-radius: calc(.25rem - 1px);
+  vertical-align: middle;
+  border-style: none;
 }
 
 .book-card {
   background-color: #ffffff;
-  margin: 5px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }

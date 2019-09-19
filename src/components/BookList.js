@@ -31,8 +31,8 @@ const BookList = ({ books }) => {
   ));
 
   return (
-    <div className="book-list">
-      <div>{book}</div>
+    <div>
+      <div className="book-list">{book}</div>
       <Modal
         title={popupData.title}
         visible={visible}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
-import { Spin , Alert } from 'antd';
+import { Spin, Alert } from 'antd';
 
 import BookList from './BookList';
 import SearchBar from './SearchBar';
@@ -53,23 +53,23 @@ const Books = () => {
   };
 
   return (
-    <div className="books">
-      <SearchBar handleChange={handleChange} handleSearch={handleSearch} />
+    <div>
+      <SearchBar className="searchbar-div" handleChange={handleChange} handleSearch={handleSearch} />
       {loading && (
-<div className="spinner">
-       <Spin />
+      <div className="spinner books">
+        <Spin />
       </div>
-)}
+      )}
       {error ? (
         <div>
-        <Alert
-        message="An error has occured"
-        description={errorMessage}
-        type="error"
-        closable
-        onClose={onClose} 
-      />
-      </div>
+          <Alert
+            message="An error has occured"
+            description={errorMessage}
+            type="error"
+            closable
+            onClose={onClose}
+          />
+        </div>
       ) : (
         <BookList books={books} />
       )}
