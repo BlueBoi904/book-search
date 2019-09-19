@@ -12,7 +12,7 @@ const BookCard = ({ book, showModal }) => (
     onKeyDown={() => showModal(book)}
   >
 
-    {book.volumeInfo.title ? <p>{book.volumeInfo.title}</p> : null}
+    <h5>{book.volumeInfo.title ? <p>{book.volumeInfo.title}</p> : null}</h5>
     <p>
     By:
       {' '}
