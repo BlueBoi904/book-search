@@ -49,6 +49,7 @@ body {
 .book-card h5 {
   text-align: center;
 }
+
 .button-div {
   background-color: aqua;
   margin: 0 auto;
@@ -101,6 +102,11 @@ h6 {
   border-radius: calc(.25rem - 1px);
   vertical-align: middle;
   border-style: none;
+}
+
+.card-img:hover {
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(92, 92, 92, 0.175);
 }
 
 .book-card {

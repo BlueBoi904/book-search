@@ -33,7 +33,9 @@ const Books = () => {
 
       const response = await axios.get(
         `${URL}${searchField}&maxResults=16&key=${KEY}`,
+
       );
+      console.log(response);
       if (!response.data.items) {
         setLoading(false);
         const errorMessage = { message: 'There are no results for your search' };
@@ -51,8 +53,8 @@ const Books = () => {
   const handleChange = (e) => {
     setSearchField(e.target.value);
   };
-
   return (
+
     <div>
       <SearchBar className="searchbar-div" handleChange={handleChange} handleSearch={handleSearch} />
       {loading && (
