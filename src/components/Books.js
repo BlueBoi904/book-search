@@ -35,7 +35,7 @@ const Books = () => {
         `${URL}${searchField}&maxResults=16&key=${KEY}`,
 
       );
-      console.log(response);
+      console.log(response.data.items);
       if (!response.data.items) {
         setLoading(false);
         const errorMessage = { message: 'There are no results for your search' };

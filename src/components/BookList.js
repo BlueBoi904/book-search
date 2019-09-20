@@ -10,7 +10,7 @@ const BookList = ({ books }) => {
   const showModal = (bookData) => {
     setVisible(true);
     setPopupData({
-      image: bookData.volumeInfo.imageLinks.smallThumbnail,
+      image: bookData.volumeInfo.imageLinks.thumbnail,
       title: bookData.volumeInfo.title,
       description: bookData.searchInfo.textSnippet,
       averageRating: bookData.volumeInfo.averageRating,
@@ -29,7 +29,6 @@ const BookList = ({ books }) => {
   const book = books.map((item) => (
     <BookCard key={item.etag} book={item} showModal={showModal} />
   ));
-
   return (
     <div>
       <div className="book-list">{book}</div>
