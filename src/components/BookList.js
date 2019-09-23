@@ -43,7 +43,6 @@ const BookList = ({ books }) => {
           src={popupData.image}
           style={{ width: 200, height: 275 }}
         />
-        <p>{popupData.description}</p>
       </Modal>
     </div>
   );
