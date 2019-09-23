@@ -1,6 +1,6 @@
 # Chingu Book Finder
 
-Dynamic web store app that allows users to purchase items, add items to a cart, login/logout, and process payments.
+Book finder app built for Chingu cohort 12
 
 # Technologies Used
 
@@ -10,10 +10,13 @@ Dynamic web store app that allows users to purchase items, add items to a cart, 
 
 # What I've Learned
 
+- Dynamic styling for mobile optimization
+- Advanced error handling
 
 # Images
 
+<img src='src/assets/homepage.png' heigth='500'>
 
 # Test App Live
 
-Test for yourself here: 
+Test for yourself here: http://bit.ly/cliffs-book-finder
