@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import { Modal } from 'antd';
-import BookCard from './BookCard';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import { Modal } from "antd";
+import BookCard from "./BookCard";
 
 const BookList = ({ books }) => {
   const [visible, setVisible] = useState(false);
   const [popupData, setPopupData] = useState({});
 
-  const showModal = (bookData) => {
+  const showModal = bookData => {
     setVisible(true);
-    setPopupData({
-      image: bookData.volumeInfo.imageLinks.thumbnail,
-      title: bookData.volumeInfo.title,
-      description: bookData.searchInfo.textSnippet,
-      averageRating: bookData.volumeInfo.averageRating,
-      infoLink: bookData.volumeInfo.infoLink,
-    });
+    if (bookData.volumeInfo.imageLinks.thumbnail) {
+      setPopupData({
+        image: bookData.volumeInfo.imageLinks.thumbnail,
+      });
+    }
   };
 
   const handleOk = () => {
@@ -26,7 +24,7 @@ const BookList = ({ books }) => {
     setVisible(false);
   };
 
-  const book = books.map((item) => (
+  const book = books.map(item => (
     <BookCard key={item.etag} book={item} showModal={showModal} />
   ));
   return (
